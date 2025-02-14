@@ -125,3 +125,34 @@
 #TOC ul {
   font-size: 1.2rem;
 }
+
+/* New styles for the navigation menu */
+#navMenu {
+  width: 250px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  padding: 20px;
+}
+
+#navMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navMenu li {
+  margin-bottom: 10px;
+}
+
+#navMenu a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#navMenu a:hover {
+  text-decoration: underline;
+}
+
+#navMenu .current-section {
+  font-weight: bold;
+  color: #0056b3;
+}
