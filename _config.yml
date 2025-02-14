@@ -3,6 +3,3 @@ plugins_dir:
   - jekyll-seo-tag
 
 
-#theme:Cayman
-#plugins_dir:
-  -jekyle-seo-tag
