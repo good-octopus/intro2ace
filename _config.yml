@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman@v0.2.0
-plugins_dir:
+plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme 
 
