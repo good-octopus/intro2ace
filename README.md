@@ -17,3 +17,13 @@ The repository is organized as follows:
 - `trust_science.md`: Facts and knowledge from journals.
 - `why_i_made_this_website.md`: Explanation of why the website was created.
 - `worried.md`: Heterosexuality questionnaire.
+- `favicon/`: Directory containing favicon files.
+
+## Favicon
+
+The favicon files are located in the `favicon` directory. These files include:
+
+- `favicon-96x96.png`: Favicon image in PNG format with a size of 96x96 pixels.
+- `favicon.svg`: Favicon image in SVG format.
+- `apple-touch-icon.png`: Favicon image for Apple touch devices.
+- `site.webmanifest`: Web manifest file for the favicon.
