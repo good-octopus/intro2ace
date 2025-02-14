@@ -1,3 +1,8 @@
-theme:Cayman
+theme: jekyll-theme-cayman
 plugins_dir:
+  - jekyll-seo-tag
+
+
+#theme:Cayman
+#plugins_dir:
   -jekyle-seo-tag
