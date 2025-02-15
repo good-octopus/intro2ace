@@ -174,3 +174,13 @@
 .content {
   background-color: white;
 }
+
+/* Add CSS to hide the sidebar when the "visible" class is not present */
+#navMenu {
+  display: none;
+}
+
+/* Update the CSS to show the sidebar when the "visible" class is present */
+#navMenu.visible {
+  display: block;
+}
