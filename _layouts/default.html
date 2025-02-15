@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/introduction/' | relative_url }}">Introduction</a></li>
+        <li><a href="{{ '/experiences-by-others/' | relative_url }}">Experiences by Others</a></li>
+        <li><a href="{{ '/glossary/' | relative_url }}">Glossary</a></li>
+        <li><a href="{{ '/myth-busters/' | relative_url }}">Myth Busters</a></li>
+        <li><a href="{{ '/other-resources/' | relative_url }}">Other Resources</a></li>
+        <li><a href="{{ '/school/' | relative_url }}">School</a></li>
+        <li><a href="{{ '/survive-sex-ed/' | relative_url }}">Survive Sex Ed</a></li>
+        <li><a href="{{ '/trust-science/' | relative_url }}">Trust Science!</a></li>
+        <li><a href="{{ '/why-i-made-this-website/' | relative_url }}">Why I Made This Website</a></li>
+        <li><a href="{{ '/worried/' | relative_url }}">Worried?</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </footer>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
