@@ -3,6 +3,18 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="left.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navLinks = document.querySelectorAll("#navMenu a");
+      var currentPage = window.location.pathname.split("/").pop();
+
+      navLinks.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("current-section");
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <div id="navMenu">
@@ -18,6 +30,9 @@
       <li><a href="why_i_made_this_website.md">Why I Made This Website</a></li>
       <li><a href="worried.md">Worried?</a></li>
     </ul>
+  </div>
+  <div class="content">
+    <!-- Main content goes here -->
   </div>
 </body>
 </html>
