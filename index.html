@@ -14,7 +14,7 @@
         }
       });
 
-      // Pf2f4: JavaScript to toggle the visibility of the sidebar
+      // JavaScript to toggle the visibility of the sidebar
       var hamburgerMenu = document.getElementById("hamburgerMenu");
       var navMenu = document.getElementById("navMenu");
 
@@ -39,7 +39,7 @@
     });
   </script>
   <style>
-    /* P2ca9: Add CSS for the hamburger menu icon */
+    /* Add CSS for the hamburger menu icon */
     #hamburgerMenu {
       display: none;
       cursor: pointer;
@@ -47,9 +47,10 @@
       position: fixed;
       top: 10px;
       left: 10px;
+      z-index: 1000; /* Ensure the hamburger menu is always on top */
     }
 
-    /* P80ed: Ensure the sidebar is hidden by default on smaller screens */
+    /* Ensure the sidebar is hidden by default on smaller screens */
     @media (max-width: 768px) {
       #navMenu {
         display: none;
@@ -66,7 +67,7 @@
   </style>
 </head>
 <body>
-  <!-- P2ca9: Add a hamburger menu icon to the navigation bar -->
+  <!-- Add a hamburger menu icon to the navigation bar -->
   <div id="hamburgerMenu">&#9776;</div>
   <div id="navMenu">
     <ul>
