@@ -131,7 +131,7 @@
 /* New styles for the navigation menu */
 #navMenu {
   width: 250px;
-  background-color: lightgrey; /* Pa29d */
+  background-color: white;
   border-right: 1px solid #dee2e6;
   padding: 20px;
   position: fixed;
@@ -139,10 +139,6 @@
   left: 0;
   height: 100%;
   overflow-y: auto;
-}
-
-#navMenu:hover {
-  transform: translateX(5px); /* P5486 */
 }
 
 #navMenu ul {
@@ -155,15 +151,16 @@
 }
 
 #navMenu a {
-  color: #000000; /* P9c0e */
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Open Sans', sans-serif; /* P3696 */
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2; /* Increased line-height for more space between lines */
 }
 
 #navMenu a:hover {
-  font-weight: bold; /* Pad23 */
-  margin-left: 5px; /* P5486 */
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 #navMenu .current-section {
@@ -171,7 +168,6 @@
   color: #0056b3;
 }
 
-/* P2eb2 */
 .content {
-  background-color: lightpurple;
+  background-color: white;
 }
