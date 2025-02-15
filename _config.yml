@@ -5,3 +5,4 @@ plugins:
   - jekyll-toc
 
 markdown: kramdown
+permalink: /:title/
