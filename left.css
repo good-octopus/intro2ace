@@ -155,8 +155,8 @@
   text-decoration: none;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5; /* Reduced line-height for less space between lines */
-  padding: 5px 0; /* Reduced padding for less space between lines */
+  line-height: 1.2; /* Reduced line-height for less space between lines */
+  padding: 2px 0; /* Reduced padding for less space between lines */
   display: block; /* Make the entire line clickable */
   width: 100%; /* Make the entire line clickable */
 }
