@@ -1,3 +1,4 @@
+remote_theme:cayman
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme 
