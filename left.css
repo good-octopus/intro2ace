@@ -159,15 +159,10 @@
 
 #navMenu a:hover {
   font-weight: bold; /* Pad23 */
-  margin-left: 10px; /* P5486 */
+  margin-left: 5px; /* P5486 */
 }
 
 #navMenu .current-section {
   font-weight: bold;
   color: #0056b3;
-}
-
-/* Set the body background color to light purple */
-body {
-  background-color: #e6e6fa;
 }
