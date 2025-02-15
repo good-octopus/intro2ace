@@ -3,3 +3,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme 
   - jekyll-toc
+
+markdown: kramdown

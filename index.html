@@ -13,10 +13,46 @@
           link.classList.add("current-section");
         }
       });
+
+      // Pf2f4: JavaScript to toggle the visibility of the sidebar
+      var hamburgerMenu = document.getElementById("hamburgerMenu");
+      var navMenu = document.getElementById("navMenu");
+
+      hamburgerMenu.addEventListener("click", function() {
+        navMenu.classList.toggle("visible");
+      });
     });
   </script>
+  <style>
+    /* P2ca9: Add CSS for the hamburger menu icon */
+    #hamburgerMenu {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+    }
+
+    /* P80ed: Ensure the sidebar is hidden by default on smaller screens */
+    @media (max-width: 768px) {
+      #navMenu {
+        display: none;
+      }
+
+      #navMenu.visible {
+        display: block;
+      }
+
+      #hamburgerMenu {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- P2ca9: Add a hamburger menu icon to the navigation bar -->
+  <div id="hamburgerMenu">&#9776;</div>
   <div id="navMenu">
     <ul>
       <li><a href="introduction.md">Introduction</a></li>

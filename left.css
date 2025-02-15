@@ -131,7 +131,7 @@
 /* New styles for the navigation menu */
 #navMenu {
   width: 250px;
-  background-color: #f8f9fa;
+  background-color: grey; /* Pa29d */
   border-right: 1px solid #dee2e6;
   padding: 20px;
   position: fixed;
@@ -158,9 +158,8 @@
 }
 
 #navMenu a:hover {
-  text-decoration: underline;
-  margin-right: 5px; /* P9402 */
-  background-color: #e0e0e0; /* P9402 */
+  font-weight: bold; /* Pad23 */
+  margin-left: 10px; /* P5486 */
 }
 
 #navMenu .current-section {
