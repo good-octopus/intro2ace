@@ -157,6 +157,8 @@
   font-family: 'Open Sans', sans-serif;
   line-height: 2; /* Increased line-height for more space between lines */
   padding: 10px 0; /* Increased padding for more clickable area */
+  display: block; /* Make the entire line clickable */
+  width: 100%; /* Make the entire line clickable */
 }
 
 #navMenu a:hover {
