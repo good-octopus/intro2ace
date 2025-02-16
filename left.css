@@ -191,3 +191,22 @@
     padding-left: 0; /* Remove padding when sidebar is not visible */
   }
 }
+
+/* Add CSS for the hamburger menu icon */
+#hamburgerMenu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure the hamburger menu is always on top */
+  animation: pulse 1s infinite;
+  animation-duration: 5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
