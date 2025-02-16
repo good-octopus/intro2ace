@@ -176,3 +176,18 @@
   padding-left: 250px; /* Add padding to the left to account for the sidebar */
   text-align: center; /* Ensure the title is aligned to the center considering the sidebar */
 }
+
+/* Ensure the sidebar is not visible by default on smaller screens */
+@media (max-width: 768px) {
+  #navMenu {
+    display: none;
+  }
+
+  #navMenu.visible {
+    display: block;
+  }
+
+  .content {
+    padding-left: 0; /* Remove padding when sidebar is not visible */
+  }
+}
