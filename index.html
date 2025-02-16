@@ -33,6 +33,7 @@
             })
             .then(function(data) {
               document.querySelector(".content").innerHTML = data;
+              navMenu.classList.remove("visible"); <!-- Pab59 -->
             });
         });
       });
@@ -48,14 +49,6 @@
       top: 10px;
       left: 10px;
       z-index: 1000; /* Ensure the hamburger menu is always on top */
-      animation: pulse 1s infinite;
-      animation-duration: 5s;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
     }
 
     /* Ensure the sidebar is hidden by default on smaller screens */
