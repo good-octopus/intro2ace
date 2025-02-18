@@ -1,4 +1,4 @@
-remote_theme: pages-themes/cayman
+remote_theme: good-octopus/cayman
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme 
