@@ -14,9 +14,12 @@
         }
       });
 
+      // Ensure the sidebar is closed by default
+      var navMenu = document.getElementById("navMenu");
+      navMenu.classList.remove("visible");
+
       // JavaScript to toggle the visibility of the sidebar
       var hamburgerMenu = document.getElementById("hamburgerMenu");
-      var navMenu = document.getElementById("navMenu");
 
       hamburgerMenu.addEventListener("click", function() {
         navMenu.classList.toggle("visible");
