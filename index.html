@@ -33,7 +33,7 @@
             })
             .then(function(data) {
               document.querySelector(".content").innerHTML = data;
-              navMenu.classList.remove("visible"); <!-- Pab59 -->
+              navMenu.classList.remove("visible");
             });
         });
       });
@@ -64,6 +64,18 @@
       #hamburgerMenu {
         display: block;
       }
+    }
+
+    /* Change the background color */
+    body {
+      background-color: #EADEEC;
+      font-size: 16px; /* Change the font size */
+    }
+
+    /* Adjust the width of the text to ensure it is not too wide */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
     }
   </style>
 </head>
