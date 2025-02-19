@@ -33,10 +33,28 @@
             })
             .then(function(data) {
               document.querySelector(".content").innerHTML = data;
-              navMenu.classList.remove("visible"); <!-- Pab59 -->
+              navMenu.classList.remove("visible");
             });
         });
       });
+
+      // Add JavaScript to implement the escape key function to redirect to "https://google.com" after pressing the escape key 3 times within 1 second
+      let escapeTimerHandle = 0;
+      let escapeCount = 0;
+      function checkKeyPressed(evt) {
+          if (evt.key === "Escape" || evt.key === "Esc") {
+              clearTimeout(escapeTimerHandle);
+              escapeCount++;
+              if (escapeCount == 3) {
+                  window.location.replace("https://google.com");
+              } else {
+                  escapeTimerHandle = setTimeout(function(){
+                      escapeCount = 0;
+                  }, 1000);
+              }
+          }
+      }
+      window.addEventListener("keydown", checkKeyPressed, false);
     });
   </script>
   <style>
@@ -70,7 +88,7 @@
 <body>
   <!-- Add a hamburger menu icon to the navigation bar -->
   <div id="hamburgerMenu">&#9776;</div>
-  <div id="navMenu">
+  <div id="navMenu" class="hidden-by-default">
     <ul>
       <li><a href="/intro2ace/introduction/">Introduction</a></li>
       <li><a href="/intro2ace/experiences-by-others/">Experiences by Others</a></li>
