@@ -172,9 +172,10 @@
 }
 
 .content {
-  background-color: white;
+  background-color: #EEEEEE;
   padding-left: 250px; /* Add padding to the left to account for the sidebar */
   text-align: center; /* Ensure the title is aligned to the center considering the sidebar */
+  font-size: 1.2rem; /* Increase the text size to be coherent with markdown */
 }
 
 /* Ensure the sidebar is not visible by default on smaller screens */
