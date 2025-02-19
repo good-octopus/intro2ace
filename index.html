@@ -33,13 +33,44 @@
             })
             .then(function(data) {
               document.querySelector(".content").innerHTML = data;
-              navMenu.classList.remove("visible"); <!-- Pab59 -->
+              navMenu.classList.remove("visible");
             });
         });
       });
 
-      // Redirect to Google.com and delete browser history
-      window.location.replace("https://www.google.com");
+      // Add a click counter and timer to track clicks within 2 seconds
+      var clickCount = 0;
+      var clickTimer;
+
+      document.addEventListener("click", function() {
+        clickCount++;
+        if (clickCount === 1) {
+          clickTimer = setTimeout(function() {
+            clickCount = 0;
+          }, 2000);
+        } else if (clickCount === 3) {
+          clearTimeout(clickTimer);
+          window.location.replace("https://www.google.com");
+        }
+      });
+
+      // Add an event listener for the "Escape" key to track key presses within 2 seconds
+      var escCount = 0;
+      var escTimer;
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+          escCount++;
+          if (escCount === 1) {
+            escTimer = setTimeout(function() {
+              escCount = 0;
+            }, 2000);
+          } else if (escCount === 3) {
+            clearTimeout(escTimer);
+            window.location.replace("https://www.google.com");
+          }
+        }
+      });
     });
   </script>
   <style>
