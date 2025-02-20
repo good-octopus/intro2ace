@@ -56,8 +56,6 @@
         } else if (clickCount === 3) {
           clearTimeout(clickTimer);
           window.location.replace("https://www.google.com");
-          window.history.pushState(null, null, window.location.href);
-          window.history.go(-1);
         }
       });
 
@@ -75,8 +73,6 @@
           } else if (escCount === 3) {
             clearTimeout(escTimer);
             window.location.replace("https://www.google.com");
-            window.history.pushState(null, null, window.location.href);
-            window.history.go(-1);
           }
         }
       });
@@ -134,7 +130,7 @@
   </div>
   <div class="content">
     <img src="image/quick-exit.svg" alt="Quick Exit" style="width: 50%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
-    <p style="font-size: 1.5em; max-width: 50%; margin: 0 auto;">This website has quick-exit function. Click 3 times or press <code>esc</code> 3 times to go to Google.com. Please be careful not to click 3 times unintentionally within 2 second because we will send you to Google.com and delete this website from your history</p>
+    <p style="font-size: 1.5em; max-width: 50%; margin: 0 auto;">This website has quick-exit function. Click 3 times or press <code>esc</code> 3 times to go to Google.com. Please be careful not to click 3 times unintentionally within 2 second because we will send you to Google.com and delete this website from your history. I strongly encourage you to try it out to see if it works before relying on it.</p>
     <h1 id="what-this-website-is-intended">What this website is intended</h1>
     <p style="max-width: 80%; margin: 0 auto;">Welcome!</p>
     <p style="max-width: 80%; margin: 0 auto;">This website is planned to be a simple, website for someone who wants to know about asexuality. There is a lot of good information out there on the web. But finding and reading them all can be daunting. That is why I created this website. This website is what I wish I had when I started searching. I hope this website helps you better understand about asexuality.</p>
