@@ -172,7 +172,6 @@
 }
 
 .content {
-  background-color: white;
   padding-left: 250px; /* Add padding to the left to account for the sidebar */
   text-align: center; /* Ensure the title is aligned to the center considering the sidebar */
 }
