@@ -81,42 +81,62 @@
     });
   </script>
   <style>
-    /* Add CSS for the hamburger menu icon */
-    #hamburgerMenu {
-      display: none;
-      cursor: pointer;
-      font-size: 24px;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1000; /* Ensure the hamburger menu is always on top */
-    }
+/* Burger menu button */
+.burger {
+  display: inline-block;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 28px;
+  transition: border-bottom 1s ease-in-out;
+}
 
-    /* Ensure the sidebar is hidden by default on smaller screens */
-    @media (max-width: 768px) {
-      #navMenu {
-        display: none;
-      }
+.burger::before,
+.burger::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-in-out;
+}
 
-      #navMenu.visible {
-        display: block;
-      }
+.burger-check {
+  display: none;
+}
 
-      #hamburgerMenu {
-        display: block;
-      }
-    }
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+}
 
-    /* Set the background color */
-    body {
-    }
+.burger-check:checked ~ .burger::before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+}
 
+.burger-check:checked ~ .burger::after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+}
+
+/* Navigation */
+.navigation {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+}
   </style>
 </head>
 <body>
   <!-- Add a hamburger menu icon to the navigation bar -->
-  <div id="hamburgerMenu">&#9776;</div>
-  <div id="navMenu">
+  <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+  <nav id="navigation1" class="navigation">
     <ul>
       <li><a href="/intro2ace/introduction/">Introduction</a></li>
       <li><a href="/intro2ace/experiences-by-others/">Experiences by Others</a></li>
@@ -129,7 +149,7 @@
       <li><a href="/intro2ace/why-i-made-this-website/">Why I Made This Website</a></li>
       <li><a href="/intro2ace/worried/">Worried?</a></li>
     </ul>
-  </div>
+  </nav>
   <div class="content">
     <img src="image/quick-exit.svg" alt="Quick Exit" style="width: 50%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
     <p style="font-size: 1.5em; max-width: 70%; margin: 0 auto;">This website has quick-exit function.<br> Click 3 times or press  <i>esc</i>  3 times to go to Google.com and delete this website from browser history.<br><mark><strong>I strongly encourage you to try it out to see if it works before relying on it.</strong></mark><br>If you are in an unsafe environment, you may want to delete search history previous to this website now.</p>
