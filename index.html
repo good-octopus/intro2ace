@@ -1,19 +1,183 @@
-      var hamburgerMenu = document.getElementById("hamburgerMenu");
-      var navMenu = document.getElementById("navMenu");
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      hamburgerMenu.addEventListener("click", function() {
-        navMenu.classList.toggle("visible");
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.scss">
+  <link rel="stylesheet" href="left.css">
+  <script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navLinks = document.querySelectorAll("#navMenu a");
+      var currentPage = window.location.pathname.split("/").pop();
+
+      navLinks.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("current-section");
+        }
       });
 
-      // Add a click event listener to the #navMenu links to show the corresponding page
-      navLinks.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-          event.preventDefault();
-          var href = link.getAttribute("href");
-          fetch(href)
-            .then(function(response) {
-              return response.text();
-            })
-            .then(function(data) {
-              document.querySelector(".content").innerHTML = data;
-              navMenu.classList.remove("visible");
+      // JavaScript to toggle the visibility of the sidebar
+      <button class="burger"></button>
+
+
+    $('.burger').click(function () {
+      $(this).toggleClass('open');
+    });
+    
+
+      // Add a click counter and timer to track clicks within 2 seconds
+      var clickCount = 0;
+      var clickTimer;
+
+      document.addEventListener("click", function() {
+        clickCount++;
+        if (clickCount === 1) {
+          clickTimer = setTimeout(function() {
+            clickCount = 0;
+          }, 2000);
+        } else if (clickCount === 3) {
+          clearTimeout(clickTimer);
+          window.location.replace("https://www.google.com");
+        }
+      });
+
+      // Add an event listener for the "Escape" key to track key presses within 2 seconds
+      var escCount = 0;
+      var escTimer;
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+          escCount++;
+          if (escCount === 1) {
+            escTimer = setTimeout(function() {
+              escCount = 0;
+            }, 2000);
+          } else if (escCount === 3) {
+            clearTimeout(escTimer);
+            window.location.replace("https://www.google.com");
+          }
+        }
+      });
+    });
+  </script>
+  <style>
+    
+// Burger menu button
+.burger {
+	$width: 28px;
+	$thickness: 4px;
+	
+	border: 0;
+	background: none;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+
+	border-bottom: $thickness solid currentColor;
+	width: $width;
+
+	transition: border-bottom 1s ease-in-out;
+	-webkit-transition: border-bottom 1s ease-in-out; 
+
+	// Fix for extra space in Firefox
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}	 
+
+	&:before {
+		content: "";
+		display: block;
+		border-bottom: $thickness solid currentColor;
+		width: 100%;
+		margin-bottom: 5px;
+		transition: transform 0.5s ease-in-out;    
+		-webkit-transition: -webkit-transform 0.5s ease-in-out;        
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: $thickness solid currentColor;
+		width: 100%;
+		margin-bottom: 5px;
+		transition: transform 0.5s ease-in-out;
+		-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	}
+
+	&.open {
+		border-bottom: $thickness solid transparent;
+		transition: border-bottom 0.8s ease-in-out;
+		-webkit-transition: border-bottom 0.8s ease-in-out;
+
+		&:before {
+			transform: rotate(-405deg) translateY(1px) translateX(-3px);
+			-webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);      
+			transition: transform 0.5s ease-in-out;
+			-webkit-transition: -webkit-transform 0.5s ease-in-out;
+		}
+
+		&:after {
+			transform: rotate(405deg) translateY(-4px) translateX(-5px); 
+			-webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);       
+			transition: transform 0.5s ease-in-out;
+			-webkit-transition: -webkit-transform 0.5s ease-in-out;
+		}
+	}
+}
+
+
+    /* Ensure the sidebar is hidden by default on smaller screens */
+    @media (max-width: 768px) {
+      #navMenu {
+        display: none;
+      }
+
+      #navMenu.visible {
+        display: block;
+      }
+
+      #hamburgerMenu {
+        display: block;
+      }
+    }
+
+    /* Set the background color */
+    body {
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Add a hamburger menu icon to the navigation bar -->
+  <div id="hamburgerMenu">&#9776;</div>
+  <div id="navMenu">
+    <ul>
+      <li><a href="/intro2ace/introduction/">Introduction</a></li>
+      <li><a href="/intro2ace/experiences-by-others/">Experiences by Others</a></li>
+      <li><a href="/intro2ace/glossary/">Glossary</a></li>
+      <li><a href="/intro2ace/myth-busters/">Myth Busters</a></li>
+      <li><a href="/intro2ace/other-resources/">Other Resources</a></li>
+      <li><a href="/intro2ace/school/">School</a></li>
+      <li><a href="/intro2ace/survive-sex-ed/">Survive Sex Ed</a></li>
+      <li><a href="/intro2ace/trust-science/">Trust Science!</a></li>
+      <li><a href="/intro2ace/why-i-made-this-website/">Why I Made This Website</a></li>
+      <li><a href="/intro2ace/worried/">Worried?</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <img src="image/quick-exit.svg" alt="Quick Exit" style="width: 50%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+    <p style="font-size: 1.5em; max-width: 70%; margin: 0 auto;">This website has quick-exit function.<br> Click 3 times or press  <i>esc</i>  3 times to go to Google.com and delete this website from browser history.<br><mark><strong>I strongly encourage you to try it out to see if it works before relying on it.</strong></mark><br>If you are in an unsafe environment, you may want to delete search history previous to this website now.</p>
+    <h1 id="what-this-website-is-intended">What this website is intended</h1>
+    <p style="font-size: 1.2em; max-width: 80%; margin: 0 auto;">Welcome!</p>
+
+    <p style="font-size: 1.2em;max-width: 80%; margin: 0 auto;"><br>This website is a simple resource for someone who wants to know about asexuality. There is a lot of good information out there on the web. But finding and reading them all can be daunting. That is why I created this website. This website is what I wish I had when I started searching. I hope this website helps you better understand about asexuality.</p>
+  </div>
+</body>
+</html>
